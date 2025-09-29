@@ -48,7 +48,7 @@ The game challenges players to remember and repeat an increasingly long sequence
 Start playing! 🎉
 
 ## 📸 Screenshots
-![Preview Screenshot](SimonSaysGame/Screenshot 2025-09-29 104512.png)
+![Preview Screenshot](Screenshot 2025-09-29 104512.png)
 
 ## 📜 License
 
