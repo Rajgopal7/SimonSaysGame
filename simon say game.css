@@ -1,0 +1,138 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Background with gradient */
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad390, #a1c4fd, #c2e9fb);
+  background-size: 300% 300%;
+  animation: gradientBG 10s ease infinite;
+  text-align: center;
+  color: #222;
+  transition: background 0.3s ease;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Headings */
+h1 {
+  font-size: 3rem;
+  color: #111;
+  letter-spacing: 3px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px #ffffffaa;
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin-bottom: 25px;
+  font-weight: 500;
+  color: #444;
+  background: #ffffffcc;
+  padding: 10px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Button container */
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.line-one, .line-two {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+/* Simon Says buttons */
+.btn {
+  width: 130px;
+  height: 130px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border 0.2s ease;
+  border: 6px solid;
+}
+
+/* Neon borders (default state) */
+.red {
+  background: #ff4d6d;
+  border-color: #ff4d6d;
+  box-shadow: 0 0 15px #ff4d6d;
+}
+
+.green {
+  background: #3cf281;
+  border-color: #3cf281;
+  box-shadow: 0 0 15px #3cf281;
+}
+
+.yellow {
+  background: #ffe066;
+  border-color: #ffe066;
+  box-shadow: 0 0 15px #ffe066;
+}
+
+.blue {
+  background: #5dade2;
+  border-color: #5dade2;
+  box-shadow: 0 0 15px #5dade2;
+}
+
+/* Hover effect */
+.btn:hover {
+  transform: scale(1.1);
+}
+
+/* Flash effect (Game + User) */
+.flash, .userflash {
+  animation: neonFlash 0.5s ease;
+}
+
+@keyframes neonFlash {
+  0% { transform: scale(1); filter: brightness(1); }
+  50% { transform: scale(1.2); filter: brightness(2); }
+  100% { transform: scale(1); filter: brightness(1); }
+}
+
+/* Game Over background flashing red */
+body.game-over {
+  animation: redFlash 1s ease 3;
+}
+
+@keyframes redFlash {
+  0%, 100% { background-color: #ff0000; }
+  50% { background-color: #ffffff; }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .btn {
+    width: 90px;
+    height: 90px;
+    border-radius: 20px;
+  }
+  h1 {
+    font-size: 2.2rem;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+}
